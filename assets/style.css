@@ -1,0 +1,199 @@
+@keyframes jump {
+    0%, 20%, 60%, 100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+
+    40% {
+        -webkit-transform: translateY(-20px);
+        transform: translateY(-20px);
+    }
+
+    80% {
+        -webkit-transform: translateY(-10px);
+        transform: translateY(-10px);
+    }
+
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-size: 15px;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.instagram-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    width: 60%;
+    height: 100vh;
+}
+
+.cell-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+}
+
+.cell-logo img {
+    height: 40rem;
+}
+
+.instagram-keep {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    width: 50%;
+    min-height: 36rem;
+}
+
+.group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    background-color: #EAEDE8;
+    width: 100%;
+    padding: 1.3rem 0;
+    border: 1px solid lightgray;
+}
+
+.group:nth-child(1){
+    min-height: 19rem;
+}
+
+.instagram-logo {
+    height: 3rem;
+}
+
+.profile-photo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.profile-photo img {
+    height: 6rem;
+}
+
+.instagram-login {
+    background: linear-gradient(90deg, rgba(11,201,240,1) 40%, rgba(26,26,215,1) 100%, rgba(2,0,36,1) 100%);
+    padding: 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border: none;
+    border-radius: 30px;
+    color: #ffffff;
+    font-size: 16px;
+    margin: 4px 2px;
+    box-shadow: 9px 4px 4px #A0A395;
+}
+
+.instagram-login:hover{
+    opacity: 0.8;
+    transition: 0.3s;
+}
+
+.instagram-login:hover {
+    animation: jump 1s;
+}
+
+.instagram-logout {
+    color: #0095f6;
+    margin-top: 0.1rem;
+}
+
+.instagram-logout:hover {
+    color: #002a45;
+    transition: 0.1s;
+}
+
+.not-account {
+    color: #002a45;
+    padding-bottom: 5px;
+}
+
+.link-blue {
+    color: #0095f6;
+}
+
+.link-blue:hover{
+    color: #002a45;
+    transition: 0.1s;
+}
+
+.get-the-app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 1.3rem;
+}
+
+.download {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 1.2rem;
+}
+
+.app-download {
+    height: 3rem;
+    width: 10rem;
+    background-size: cover;
+}
+
+.app-download:nth-child(2){
+    background-image: url("../img/apple-button.png");
+}
+
+.app-download:nth-child(1){
+    background-image: url("../img/googleplay-button.png");
+}
+
+@media (max-width: 1024px){
+    .instagram-wrapper {
+        width: 90%;
+    }
+}
+
+@media (max-width: 650px){
+    body {
+        background-color: rgb(243, 243, 243);
+    }
+
+    .instagram-wrapper {
+        width: 100%;
+    }
+
+    .cell-logo {
+        display: none;
+    }
+
+    .instagram-keep {
+        margin: 5% auto;
+        align-content: center;
+
+    }
+}
